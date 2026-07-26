@@ -5,13 +5,23 @@
 
 A [Claude skill](https://www.anthropic.com/news/skills) for reducing complexity — not just in what gets written, but in what gets conceived, scoped, structured, and built.
 
+Built by [Pragmatic Labs](https://pragmaticlabs.ai).
+
 **v2** — see [CHANGELOG](./CHANGELOG.md) for what changed and why.
+
+## The problem this fixes: Subtractive AI
+
+Every model ships with some version of "you are a helpful assistant" as its first instruction, and models are slavishly literal about fulfilling it. Left alone, they're additive by default — a rewritten email gets an extra line "for completeness," a Jira ticket balloons into something a Fortune 50 scrum master would write to justify their existence, a business plan grows padding that scales with the size of the ask rather than the size of the problem. None of it is wrong, exactly. All of it costs the reader time, and at scale it costs budgets and calendars: a plan dense enough to look impressive can be dense enough to become unbuildable.
+
+The same reflex operates above the prose layer, where it's more expensive. Additive design invents a fifth service domain because four looked thin, keeps a feature nobody asked for because removing it feels like a loss, and preserves a process step whose original constraint disappeared two years ago.
+
+Little Prince is the prescription, applied at every altitude.
 
 ## The idea
 
 Most simplification advice operates on wording. That's the cheapest layer and the least valuable one. Tightening the prose of a spec for a feature that shouldn't exist is motion, not progress.
 
-Little Prince applies a single test at every altitude:
+Little Prince applies a single test at every scale:
 
 > **What is this carrying, and what breaks if it's gone?**
 
@@ -32,6 +42,31 @@ So the skill works in descending order of leverage:
 | 5 | Expression | Hedges, restatement, unrequested options, throat-clearing |
 
 Most requests arrive pointed at level 5. The skill checks the others first anyway. The highest-value response is often *"the document you asked me to tighten describes something you shouldn't build."*
+
+## Why not just ask for "be concise"?
+
+Because brevity and distillation solve different problems. "Be concise" compresses sentences and risks cutting content the problem actually needs — and it only ever operates on level 5. Little Prince re-derives the target from the problem first, then fills only that: a hard problem gets a long, undiluted answer; a simple one gets a short one. The instruction isn't "say less," it's "carry only what's load-bearing, starting with the most expensive thing you could remove."
+
+## Before / after
+
+**Request:** "Give me a rollout plan for a new internal tool."
+
+**Additive default (representative, not verbatim):**
+> This is an exciting opportunity to modernize our internal tooling. Before diving into logistics, it's worth considering the broader context of digital transformation and change management. A successful rollout should account for stakeholder buy-in, phased communication strategies, training programs tailored to different learning styles, feedback loops, contingency planning for adoption resistance, and a robust framework for measuring success across multiple KPIs...
+> *(continues for several more paragraphs before reaching an actual schedule)*
+
+**Little Prince:**
+> **Week 1:** Pilot with 5 users, daily check-ins.
+> **Week 2:** Fix what broke. Expand to 20.
+> **Week 3:** Full rollout. One retro at the end.
+>
+> Skip training decks — screen-share the first week instead. Cut this shorter if the pilot goes clean.
+
+Same problem, same required decisions, a fifth of the words — because the extra paragraphs weren't answering the question, they were performing thoroughness.
+
+**And one level up.** Given a content taxonomy with five domains — Articles, Guides, Tutorials, Case Studies, Resources — it doesn't tighten the category descriptions:
+
+> Guides and Tutorials differ in tone, not in what a reader does with them — one category. Resources is a bucket for things that didn't fit elsewhere, which means it isn't a category, it's an admission the taxonomy is incomplete; distribute its contents and delete it. Three domains. Every item now has one obvious home, which was the point of having a taxonomy.
 
 ## What it protects
 
@@ -67,11 +102,13 @@ Good prompts:
 - *"Review this architecture — what's not earning its place?"*
 - *"Give me the leanest version of this plan that still works."*
 
+See [`SKILL.md`](./SKILL.md) for the full operating instructions and worked examples.
+
 ## Design notes
 
 A few decisions worth knowing if you fork it:
 
-- **One test, not a taxonomy of tests.** An earlier draft listed tactics by artifact type. That version handled the cases it named and missed everything else. A single generative principle transfers; a list doesn't.
+- **One test, not a taxonomy of tests.** v1 listed tactics by artifact type. That version handled the cases it named and missed everything else. A single generative principle transfers; a list doesn't.
 - **Leverage ordering is the core mechanic.** Without it, the skill happily optimizes the wrong layer.
 - **The guardrails are load-bearing.** They cost length, and they're what keep "ruthless" from becoming "reckless."
 
