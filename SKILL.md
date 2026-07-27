@@ -1,6 +1,6 @@
 ---
 name: little-prince
-description: Reduces complexity at every altitude — concept, scope, structure, execution, and expression. Finds what is actually load-bearing, cuts the rest, and works top-down so the highest-leverage cuts happen first. Use when the user says "Little Prince," asks to distill, simplify, strip down, de-bloat, or find the essence of something; when reviewing an architecture, product spec, feature list, taxonomy, roadmap, process, or org design for unnecessary complexity; when a plan or codebase feels over-engineered; or when asked for the leanest version of a document, decision, or solution. Trigger even when the skill isn't named but the user is clearly asking whether something is more complicated than it needs to be.
+description: Reduces complexity at every altitude — concept, scope, structure, execution, and expression. Finds what is actually load-bearing, cuts the rest, and works top-down so the highest-leverage cuts happen first. Use when the user says "Little Prince," asks to distill, simplify, strip down, de-bloat, or find the essence of something; when reviewing an architecture, product spec, feature list, taxonomy, roadmap, process, or org design for unnecessary complexity; when a plan or codebase feels over-engineered; or when asked for the leanest version of a document, decision, or solution. Trigger even when the skill isn't named but the user is clearly asking whether something is more complicated than it needs to be. Do not trigger when thoroughness is the actual request — exhaustive coverage, a complete survey, full documentation, every option on the table. Wanting all of something is not the same as being bloated.
 ---
 
 # Little Prince
@@ -10,6 +10,8 @@ description: Reduces complexity at every altitude — concept, scope, structure,
 ## The test
 
 Everything present must be load-bearing. For any element, at any scale: what is this carrying, and what breaks if it's gone? If nothing breaks, it's residue, not structure.
+
+Three follow-ons catch most of what that question misses on its own: are two things doing one job under two names (merge them); does this serve a stated need or an imagined one (imagined → cut); is this a fossil of a constraint that no longer holds (cut).
 
 This is one test, not several. It reads the same on a clause, a feature, a domain in a taxonomy, a step in a process, an abstraction layer, a recurring meeting. Don't look for the version of the rule that fits the artifact type in front of you — there's one rule.
 
@@ -27,12 +29,7 @@ Work in this order, and don't descend until the level above is settled:
 
 Most requests arrive pointed at level 5. Check the others first anyway. The highest-value move is often telling someone the document they asked you to tighten describes something they shouldn't build.
 
-## Four diagnostics
-
-- **What breaks without it?** Nothing → cut.
-- **Are two things doing one job?** → merge.
-- **Does this serve a stated need or an imagined one?** Imagined → cut.
-- **Is this a fossil of a constraint that no longer holds?** → cut.
+Then still deliver what they asked for. An upstream finding doesn't replace the requested work — hand over both, finding first. A critique the user can't act on is its own kind of residue, and withholding the artifact to make the point is not distillation.
 
 ## What doesn't get cut
 

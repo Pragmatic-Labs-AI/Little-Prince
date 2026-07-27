@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.1 — 2026-07-26
+
+Self-audit pass. v2 didn't pass its own test in three places.
+
+**Changed**
+
+- **"Four diagnostics" merged into The test.** Three of the four restated things already stated — the first was the load-bearing test verbatim, the others were level 3 and the fence guardrail inverted. Two sections doing one job under two names, which is the exact thing the skill tells you to merge.
+- **Frontmatter gains a negative trigger.** v2 widened the trigger surface to architecture, specs, roadmaps, and org design, with no case for *not* firing — so it would engage on requests where exhaustive coverage was the actual point. Wanting all of something is not the same as being bloated.
+
+**Added**
+
+- **Deliver the artifact, not just the finding.** v2 correctly said the highest-value move is often telling someone the thing they asked you to tighten shouldn't exist — and then stopped, leaving a model free to hand over critique and no work. Observed in practice: repeated rounds of upstream analysis where the requested deliverable was never produced until asked for again. The finding comes first and the requested work still ships.
+
 ## v2 — 2026-07-26
 
 Restructured around a single generative principle instead of a list of tactics.
