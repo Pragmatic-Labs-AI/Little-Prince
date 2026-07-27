@@ -1,13 +1,14 @@
-# Little Prince
+<p align="center">
+  <img src="assets/header.png" alt="Little Prince — Subtractive AI" width="100%">
+</p>
 
-> "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."
-> — Antoine de Saint-Exupéry
+# Little Prince
 
 A [Claude skill](https://www.anthropic.com/news/skills) for reducing complexity — not just in what gets written, but in what gets conceived, scoped, structured, and built.
 
 Built by [Pragmatic Labs](https://pragmaticlabs.ai).
 
-**v2** — see [CHANGELOG](./CHANGELOG.md) for what changed and why.
+**v2.1** — see [CHANGELOG](./CHANGELOG.md) for what changed and why.
 
 ## The problem this fixes: Subtractive AI
 
