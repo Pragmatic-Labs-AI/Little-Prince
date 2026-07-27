@@ -115,4 +115,4 @@ A few decisions worth knowing if you fork it:
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+Apache-2.0 — see [LICENSE](./LICENSE).
