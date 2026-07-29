@@ -105,6 +105,10 @@ Good prompts:
 
 See [`SKILL.md`](./SKILL.md) for the full operating instructions and worked examples.
 
+For always-on harnesses without a self-selecting trigger (Claude Code's
+`CLAUDE.md`, Codex/`AGENTS.md`), see [`integrations/`](./integrations/) for a
+condensed, always-loaded version.
+
 ## Design notes
 
 A few decisions worth knowing if you fork it:
