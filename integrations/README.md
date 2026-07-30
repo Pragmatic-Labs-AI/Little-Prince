@@ -15,6 +15,12 @@ from frontmatter into an inline conditional inside the text itself.
   convention. Global: `~/.codex/AGENTS.md`. Project-level and nested files are
   also supported; check your tool's docs for its combined-size cap.
 
+The two files are byte-identical. That's deliberate — the filename *is* the
+trigger, so a single shared file wouldn't be found by either harness. Both are
+derived from `SKILL.md` in the repo root: treat that as the source of truth and
+re-derive both when it changes, rather than editing them independently. Nothing
+enforces this automatically, so the drift is on you to prevent.
+
 Both files are intentionally short — an always-on file sits in context on every
 turn, so length here is a permanent tax, not a one-time read.
 

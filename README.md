@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.png" alt="Little Prince — Subtractive AI" width="100%">
+  <img src="assets/header.jpg" alt="Little Prince — Pragmatic Labs AI. &quot;Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.&quot; — Antoine de Saint-Exupéry" width="100%">
 </p>
 
 # Little Prince
@@ -8,7 +8,7 @@ A [Claude skill](https://www.anthropic.com/news/skills) for reducing complexity 
 
 Built by [Pragmatic Labs](https://pragmaticlabs.ai).
 
-**v2.1** — see [CHANGELOG](./CHANGELOG.md) for what changed and why.
+**v2.2** — see [CHANGELOG](./CHANGELOG.md) for what changed and why.
 
 ## The problem this fixes: Subtractive AI
 

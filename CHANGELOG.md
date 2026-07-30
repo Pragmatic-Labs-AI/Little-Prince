@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.2 — 2026-07-29
+
+Documentation and packaging. Three earlier commits shipped undocumented; this entry records them alongside the current changes.
+
+**Added**
+
+- **`integrations/`** — condensed always-on variants for harnesses without a self-selecting trigger: `CLAUDE.md` (Claude Code, Claude Projects) and `AGENTS.md` (Codex and other readers of the open convention). The two files are byte-identical by design — the filename is the trigger, so the duplication is a real constraint, not residue. Both are derived from `SKILL.md`; treat it as the source and re-derive rather than editing them independently.
+- **Header banner** (`assets/header.jpg`).
+
+**Changed**
+
+- **License: MIT → Apache-2.0.** Adds an explicit patent grant and attribution requirements.
+- **Banner replaced and re-encoded.** The original was a 1.2 MB PNG in a repo of ~200 lines of text — a permanent cost in every clone, and a poor advertisement for a skill about removing what isn't load-bearing. Now a 158 KB JPEG, an 87% reduction. Not re-compressed further: the remaining savings were in the tens of kilobytes and would have cost visible quality on a gradient-heavy image.
+- **Epigraph restored to text.** v2.1 dropped the written epigraph when the banner arrived, leaving the skill's governing line visible only as pixels — invisible to screen readers, plain-text renderers, and anything consuming the README through the API. It now lives in the image's alt text, which recovers accessibility without duplicating it on screen.
+
+**Note**
+
+The 1.2 MB PNG remains in git history; removing it needs a history rewrite and a force push, which breaks existing clones. Left in place deliberately.
+
 ## v2.1 — 2026-07-26
 
 Self-audit pass. v2 didn't pass its own test in three places.
